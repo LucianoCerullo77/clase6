@@ -22,6 +22,13 @@ class  Conteiner {
         }
     }
 
+    getRandomElement = async() => {
+        const objArray = await this.getAllElements();
+        const randomIndex = Math.floor(Math.random() * objArray.length);
+        return objArray[randomIndex];
+    }
+    
+
     save = async(objeto) => {
         const objArray = await this.getAllElements();
 
